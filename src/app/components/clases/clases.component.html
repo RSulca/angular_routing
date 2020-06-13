@@ -1,0 +1,11 @@
+<div [ngClass]="[alerta,padding]" class="alert" role="alert">
+    A simple danger alert—check it out!
+</div>
+<button (click)="alerta='alert-success'" class="btn btn-success mr-5">Verde</button>
+<button (click)="alerta='alert-danger'" class="btn btn-danger">Rojo</button>
+<hr>
+<div class="lead my-3">Proceso asíncrono</div>
+
+<button (click)="loading()" [disabled]="flag" class="btn btn-outline-primary"> <i
+        [ngClass]="{'fa-save': !flag, 'fa-sync-alt fa-spin': flag}" class="fa"></i> <span *ngIf="!flag"> Guardar
+        cambios</span> <span *ngIf="flag"> Espere por favor</span></button>
